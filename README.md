@@ -27,7 +27,6 @@ fi
  5. Make the pre-commit file executable:
 
 ```bash
-Copy code
 chmod +x .git/hooks/pre-commit
 ```
 Now, whenever you attempt to make a commit, the pre-commit hook will automatically run gitleaks to check for secrets in your code. If any secrets are detected, the commit will be rejected, and an error message will be displayed.
