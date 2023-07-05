@@ -1,0 +1,9 @@
+#!/bin/bash
+
+output=$(gitleaks detect --verbose --redact)
+
+if [[ -n $output ]]; then
+    echo "Error: Secrets found in the code:"
+    echo "$output"
+    exit 1
+fi
